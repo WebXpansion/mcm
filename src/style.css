@@ -236,17 +236,16 @@ button {
   .product-card::before {
     content: "";
     position: absolute;
-    inset: -45px;
+    inset: -80px;
     z-index: 0;
   
     background-image: var(--glass-frame-url);
-    background-size: cover;
-    background-position: center;
+    background-size: 100vw 100vh;
+    background-position: center center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
   
-    filter: blur(34px) saturate(135%);
-    opacity: 0.85;
+    filter: blur(45px) saturate(145%);
+    opacity: 0.9;
     transform: scale(1.08);
   
     pointer-events: none;
@@ -259,20 +258,20 @@ button {
     z-index: 1;
   
     border-radius: inherit;
-    border: 1px solid rgba(255, 255, 255, 0.22);
+    border: 1px solid rgba(255, 255, 255, 0.28);
   
     background:
       linear-gradient(
         135deg,
-        rgba(255, 255, 255, 0.14),
-        rgba(255, 255, 255, 0.055) 45%,
-        rgba(255, 255, 255, 0.11)
+        rgba(255, 255, 255, 0.16),
+        rgba(255, 255, 255, 0.055) 44%,
+        rgba(255, 255, 255, 0.13)
       );
   
     box-shadow:
       0 30px 90px rgba(0, 0, 0, 0.18),
-      inset 0 1px 0 rgba(255, 255, 255, 0.20),
-      inset 0 -1px 0 rgba(255, 255, 255, 0.08);
+      inset 0 1px 0 rgba(255, 255, 255, 0.22),
+      inset 0 -1px 0 rgba(255, 255, 255, 0.10);
   
     pointer-events: none;
   }
