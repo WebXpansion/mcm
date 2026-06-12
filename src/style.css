@@ -263,6 +263,9 @@ button {
     pointer-events: auto;
   
     transform: translate3d(0, 0, 0) scale(1);
+    background-color: rgb(255 255 255 / 6%) !important;
+    backdrop-filter: saturate(140%) blur(30px);
+    -webkit-backdrop-filter: saturate(60%) blur(20px);
   
     transition:
       opacity 460ms ease,
