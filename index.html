@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#050505" />
+    <meta
+      name="description"
+      content="Luxury scroll-driven frame animation experience."
+    />
+    <title>MCM Scroll Experience</title>
+  </head>
+  <body>
+    <main id="app">
+      <section id="frame-section" class="frame-section" aria-label="Scroll driven frame animation">
+        <div class="sticky-canvas">
+          <canvas id="frame-canvas" aria-hidden="true"></canvas>
+
+          <div class="grain" aria-hidden="true"></div>
+          <div class="vignette" aria-hidden="true"></div>
+
+          <header class="luxury-header" aria-label="MCM header">
+            <span class="header-square header-square-left" aria-hidden="true"></span>
+            <span class="header-line header-line-left" aria-hidden="true"></span>
+
+            <a class="brand-logo" href="/" aria-label="MCM Home">
+              <img src="/brand/mcm-logo.svg" alt="MCM" />
+            </a>
+
+            <span class="header-line header-line-right" aria-hidden="true"></span>
+            <span class="header-square header-square-right" aria-hidden="true"></span>
+          </header>
+
+          <aside id="product-card" class="product-card is-hidden" aria-live="polite"></aside>
+
+          <aside class="frame-debug" aria-label="Frame debug panel">
+            <span>Current frame</span>
+            <span id="frame-current">0001</span>
+            <button id="copy-frame" type="button">Copy</button>
+          </aside>
+
+          <div id="scroll-hint" class="scroll-hint" aria-hidden="true">
+            <span>scroll</span>
+            <i></i>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <section class="mobile-lock" aria-label="Desktop only message">
+      <div>
+        <span>Desktop only</span>
+        <h1>Experience available on desktop for now</h1>
+      </div>
+    </section>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
