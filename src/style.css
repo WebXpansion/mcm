@@ -225,9 +225,11 @@ button {
       opacity 460ms ease,
       transform 520ms cubic-bezier(0.22, 1, 0.36, 1),
       visibility 0ms linear 520ms;
+
       background-color: rgb(255 255 255 / 6%) !important;
-      backdrop-filter: saturate(140%) blur(30px);
-      -webkit-backdrop-filter: saturate(60%) blur(20px);
+      backdrop-filter: saturate(140%) blur(30px)!important;
+      -webkit-backdrop-filter: saturate(60%) blur(20px)!important;
+
   }
   
   /* Glass background */
@@ -448,6 +450,9 @@ button {
   animation: none;
   opacity: 0;
   filter: blur(18px);
+  background-color: rgb(255 255 255 / 6%) !important;
+  backdrop-filter: saturate(140%) blur(30px)!important;
+  -webkit-backdrop-filter: saturate(60%) blur(20px)!important;
   transform: translateY(8px);
   transition:
     opacity 300ms ease,
