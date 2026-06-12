@@ -38,6 +38,13 @@ const clamp = (value, min, max) => Math.min(Math.max(value, min), max);
 const padFrame = (frame) => String(frame).padStart(FRAME_PADDING, '0');
 const getFrameSrc = (frame) => `${FRAME_PATH}${padFrame(frame)}${FRAME_EXTENSION}`;
 
+function updateGlassFrame(frame) {
+  document.documentElement.style.setProperty(
+    '--glass-frame-url',
+    `url("${getFrameSrc(frame)}")`
+  );
+}
+
 async function loadMeta() {
   try {
     const response = await fetch('/frames/meta.json', { cache: 'force-cache' });
@@ -275,6 +282,7 @@ function renderByScroll() {
   if (nextFrame === currentFrame) return;
 
   currentFrame = nextFrame;
+  updateGlassFrame(currentFrame);
   updateFrameDebug(currentFrame);
   updateProductUI(currentFrame);
 
@@ -314,9 +322,10 @@ async function init() {
   await loadMeta();
   setScrollLength();
   resizeCanvas();
-  updateFrameDebug(currentFrame);
-  updateProductUI(currentFrame);
-  bindEvents();
+updateGlassFrame(currentFrame);
+updateFrameDebug(currentFrame);
+updateProductUI(currentFrame);
+bindEvents();
 
   const firstImage = await loadFrame(1);
   drawFrame(firstImage, 1);
